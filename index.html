@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="U23CS706 Data Mining OBE course portal and interactive learning activities">
+<title>U23CS706 | Data Mining — OBE Smart Course</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <nav><a class="brand" href="#home">DM<span>·</span>OBE</a><div class="navlinks"><a href="#overview">Overview</a><a href="#outcomes">COs</a><a href="#units">Units</a><a href="#lab">Decision Lab</a><a href="#assessment">Assessment</a></div></nav>
+  <div class="hero-content" id="home"><p class="eyebrow">AI-ENABLED COURSE PORTFOLIO · 2026–27</p>
+  <h1>Data Mining</h1><p class="lead">Turn raw data into patterns, predictions, and responsible decisions.</p>
+  <div class="chips"><span>U23CS706</span><span>AICTE Model Curriculum</span><span>OBE-aligned</span></div>
+  <a class="cta" href="#units">Explore the syllabus ↓</a></div>
+</header>
+<main>
+<section id="overview"><div class="section-head"><p class="eyebrow">01 / COURSE OVERVIEW</p><h2>Learn the methods. Question the evidence.</h2></div>
+<div class="cards three"><article class="card"><h3>Discover patterns</h3><p>Explore data types, descriptive statistics, similarity, frequent itemsets, associations, and correlations.</p></article><article class="card"><h3>Build predictions</h3><p>Compare decision trees, Bayesian methods, Bayesian belief networks, backpropagation, and support vector machines.</p></article><article class="card"><h3>Interpret responsibly</h3><p>Compare clustering methods, evaluate cluster quality, and consider privacy and societal impact.</p></article></div>
+<p class="note"><strong>Source note:</strong> Course topics are based on the supplied U23CS706 Data Mining syllabus. Confirm the classification-unit label and official credit/contact-hour details with your department.</p></section>
+<section id="outcomes" class="tint"><div class="section-head"><p class="eyebrow">02 / COURSE OUTCOMES</p><h2>Five outcomes, one connected workflow</h2></div><div class="outcome-list">
+<div><b>CO1 · Understand</b><p>Understand basic data-mining concepts, data types, statistical measures, and data-similarity techniques.</p></div>
+<div><b>CO2 · Apply</b><p>Apply methods to discover frequent patterns, associations, and correlations in data.</p></div>
+<div><b>CO3 · Apply</b><p>Use classification techniques like decision trees, Bayesian methods, and SVM for prediction.</p></div>
+<div><b>CO4 · Apply / Analyze</b><p>Perform clustering using different methods and evaluate cluster quality.</p></div>
+<div><b>CO5 · Understand</b><p>Understand recent trends, applications, and societal impact of data mining.</p></div></div></section>
+<section id="units"><div class="section-head"><p class="eyebrow">03 / SYLLABUS MAP</p><h2>Explore the five syllabus areas</h2><p>Search topics or expand a unit for its key concepts.</p></div>
+<div class="searchrow"><input id="unitSearch" type="search" placeholder="Search topics (e.g., SVM, similarity, DBSCAN)" aria-label="Search syllabus topics"><span id="resultCount">5 units</span></div>
+<div class="unit-grid" id="unitGrid">
+<details class="unit" open><summary><span>UNIT I</span> Introduction & Getting to Know Your Data</summary><p>Data mining, types of data and patterns, technologies, applications, major issues, data objects, attribute types, statistical descriptions, visualization, similarity and dissimilarity.</p><div class="tagrow"><span>CO1</span><span>Data literacy</span><span>Similarity</span></div></details>
+<details class="unit"><summary><span>UNIT II</span> Frequent Patterns, Associations & Correlations</summary><p>Basic concepts and methods, frequent itemset mining methods, and pattern evaluation methods.</p><div class="tagrow"><span>CO2</span><span>Support</span><span>Confidence</span></div></details>
+<details class="unit"><summary><span>CLASSIFICATION*</span> Classification Methods</summary><p>Classification basics, decision-tree induction, Bayes classification, advanced methods, Bayesian belief networks, classification by backpropagation, and support vector machines.</p><div class="tagrow"><span>CO3</span><span>Decision trees</span><span>Bayes</span><span>SVM</span></div><small>*The source scan labels this “UNIT - I”; verify official numbering.</small></details>
+<details class="unit"><summary><span>UNIT IV</span> Cluster Analysis</summary><p>Cluster analysis concepts and methods, partitioning, hierarchical, density-based and grid-based methods, and cluster evaluation.</p><div class="tagrow"><span>CO4</span><span>k-means</span><span>DBSCAN</span></div></details>
+<details class="unit"><summary><span>UNIT V</span> Trends & Research Frontiers</summary><p>Mining complex data types, other methodologies, data-mining applications, data mining and society, and trends.</p><div class="tagrow"><span>CO5</span><span>Applications</span><span>Ethics</span></div></details>
+</div></section>
+<section id="lab" class="dark"><div class="section-head"><p class="eyebrow">04 / INTERACTIVE LEARNING</p><h2>Data Mining Decision Lab</h2><p>Try a small calculation, then interpret what the metric does—and does not—tell you.</p></div>
+<div class="lab-grid"><article class="lab-card"><h3>Association rule calculator</h3><p>Example: 20 transactions contain bread; 12 contain both bread and milk; 30 contain milk. Total transactions = 100.</p>
+<label for="total">Total transactions</label><input id="total" type="number" min="1" value="100">
+<label for="antecedent">Transactions with antecedent A</label><input id="antecedent" type="number" min="0" value="20">
+<label for="both">Transactions with A and B</label><input id="both" type="number" min="0" value="12">
+<label for="consequent">Transactions with consequent B</label><input id="consequent" type="number" min="0" value="30">
+<button id="calculate">Calculate support & confidence</button><div class="result" id="ruleResult" aria-live="polite">Support = 12%; confidence = 60%.</div></article>
+<article class="lab-card"><h3>Choose a method</h3><label for="task">What is your task?</label><select id="task"><option value="association">Find items that occur together</option><option value="classification">Predict a known class label</option><option value="clustering">Discover groups without labels</option></select>
+<label for="shape">What does the data look like?</label><select id="shape"><option value="ordinary">Mostly regular, low-noise data</option><option value="irregular">Irregular shapes and noise</option><option value="mixed">Mixed numeric and categorical attributes</option></select><button id="recommend">Suggest a starting point</button><div class="result" id="methodResult" aria-live="polite">Choose a task and data profile.</div><p class="micro">Recommendations are learning prompts, not substitutes for checking assumptions or validating a model.</p></article></div>
+</section>
+<section id="quiz"><div class="section-head"><p class="eyebrow">05 / QUICK CHECK</p><h2>Check your understanding</h2></div><div class="quiz-card"><p id="questionText">Which statement about association rules is most accurate?</p><div id="options" class="options"></div><button id="nextQuestion">Check answer</button><p id="quizFeedback" aria-live="polite"></p><div class="quiz-progress" id="quizProgress">Question 1 of 3</div></div></section>
+<section id="assessment" class="tint"><div class="section-head"><p class="eyebrow">06 / ASSESSMENT & RESOURCES</p><h2>Learn, practise, reflect</h2></div><div class="cards two"><article class="card"><h3>Assessment blueprint</h3><ul><li>CO1: data types, statistics, similarity</li><li>CO2: frequent patterns and rule calculations</li><li>CO3: classification method selection and validation</li><li>CO4: clustering comparison and cluster quality</li><li>CO5: applications, trends, privacy, societal impact</li></ul><p class="note">The official assessment scheme and marks were not legible/provided in the syllabus scan; use your department’s approved scheme.</p></article><article class="card"><h3>Suggested readings</h3><ul><li>Han, Kamber & Pei — <em>Data Mining: Concepts and Techniques</em>, 3rd ed.</li><li>Pudi & Radha Krishna — <em>Data Mining</em>.</li><li>Tan, Steinbach & Kumar — <em>Introduction to Data Mining</em>.</li></ul><p>Verify editions and bibliographic details in the institution library catalogue.</p></article></div></section>
+<section id="responsible"><div class="section-head"><p class="eyebrow">07 / RESPONSIBLE AI</p><h2>AI proposes. Evidence decides.</h2></div><div class="cards three"><article class="card"><h3>Protect data</h3><p>Do not upload student names, IDs, marks, or private records to unapproved AI tools.</p></article><article class="card"><h3>Verify outputs</h3><p>Check calculations, code, citations, assumptions, and model behaviour before use.</p></article><article class="card"><h3>Keep humans accountable</h3><p>AI may suggest feedback; faculty make grading, attainment, and academic decisions.</p></article></div></section>
+</main>
+<footer><div><strong>U23CS706 · Data Mining</strong><p>AI-Enabled Smart Course Design · FDP Capstone Portfolio</p></div><a href="#home">Back to top ↑</a></footer>
+<script src="script.js"></script>
+</body></html>
